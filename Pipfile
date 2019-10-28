@@ -1,0 +1,21 @@
+[[source]]
+
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+requests = "*"
+ipython = "*"
+pika = "*"
+xlsxwriter = "*"
+pymongo = "*"
+numpy = "*"
+"beautifulsoup4" = "*"
+"146508e" = {path = ".\\Twisted-17.9.0-cp36-cp36m-win_amd64.whl"}
+scrapy = "*"
+
+[dev-packages]
+

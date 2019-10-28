@@ -10,6 +10,10 @@ import os
 # os.chdir('/')  切换目录到根目录
 
 
+def editfile(filepath):
+    print(filepath)
+
+
 def visitfiletree(path, layer):
     os.chdir(path)
     cwd = os.getcwd()
@@ -17,14 +21,16 @@ def visitfiletree(path, layer):
     # print(filenames)
     for filename in filenames:
 
-        for i in range(layer):
-            print('', end='  ')
+        # for i in range(layer):
+        #     print('', end='  ')
+        # if filename.endswith('.jsp'):
+        filepath = cwd + '\\' + filename
+        editfile(filepath)
 
-        print(filename)
         if os.path.isdir(cwd + '/' + filename):
             visitfiletree(cwd + '/' + filename, layer + 1)
 
 
 if __name__ == '__main__':
-    path = 'D:/Personal/Desktop/'
+    path='d:/path'
     visitfiletree(path, 0)

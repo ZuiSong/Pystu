@@ -39,3 +39,4 @@ def theta():
 
 if __name__ == '__main__':
     theta()
+    main()

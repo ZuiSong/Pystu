@@ -7,9 +7,9 @@ import xlsxwriter
 workbook = xlsxwriter.Workbook('豆瓣图书排行榜.xlsx')
 worksheet = workbook.add_worksheet('豆瓣图书')
 conn = pymysql.connect(user='root', passwd='123',
-                       host='127.0.0.1', db='test', charset="utf8")
+                       host='127.0.0.1', db='mybatis', charset="utf8")
 cur = conn.cursor()
-cur.execute("SELECT * FROM mycalss")
+cur.execute("SELECT * FROM douban_movie_book")
 row = 0
 for r in cur:
     colum = 0

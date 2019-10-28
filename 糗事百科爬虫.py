@@ -21,6 +21,7 @@ def spider(weburl):
         soup = BeautifulSoup(data, 'html.parser')
         eles = soup.find_all("div", class_="content")
         for ele in eles:
+            print(ele.text.strip())
             worksheet.write(n, 0, ele.text.strip())
             n = n + 1
         try:
